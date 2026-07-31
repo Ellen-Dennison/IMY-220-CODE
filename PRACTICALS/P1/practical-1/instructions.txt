@@ -1,0 +1,10 @@
+//This is building the image 
+docker build -t u23849259 .
+
+//running the image making it a container
+/3001 is on your localhost : this is your container
+//expose container in the dockerfile
+docker run -e APP_NAME="PhotoShare API" -e APP_ENV=docker --name u23849259 -p 3001:5000 u23849259
+
+//container id
+docker update --restart=always 
