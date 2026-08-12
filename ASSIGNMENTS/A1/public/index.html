@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link rel="stylesheet" href="style.css">
+
+    <title>Real-Time Messenger</title>
+</head>
+<body>
+
+    <h1>Real-Time Messenger</h1>
+
+    <p>Open this page in two browser tabs.</p>
+
+    <p id="userCount">Users online: 0</p>
+
+    <form id="messageForm">
+        <label for="messageUsername">Display name</label>
+        <input
+            type="text"
+            id="messageUsername"
+            name="username"
+        >
+
+        <label for="messageInput">Message</label>
+        <input
+            type="text"
+            id="messageInput"
+            name="message"
+        >
+
+        <button type="submit">
+            Send Message
+        </button>
+    </form>
+
+    <p id="responseMessage"></p>
+
+    <div id="messages"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

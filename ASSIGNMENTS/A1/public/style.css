@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: steelblue;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+}
+
+#responseMessage {
+    color: red;
+    font-weight: bold;
+}
+
+#messages {
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    min-height: 200px;
+}
+
+#messages p {
+    margin: 5px 0;
+}
+
+#userCount {
+    font-weight: bold;
+}

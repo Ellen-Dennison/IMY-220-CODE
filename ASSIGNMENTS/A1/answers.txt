@@ -1,0 +1,15 @@
+/** QUESTION 1 **/
+You can generate this file from package.json via npm install, 
+it can be huge and therefore submitting it is unnecessary.
+
+/** QUESTION 2 **/
+An entry point so anyone can launch the app 
+the same way regardless of the internal structure.
+
+/** QUESTION 3 **/
+io.emit is a broadcast to everyone, including sender
+rather than socket.emit which only sends information back to the sender
+
+/** QUESTION 4 **/
+client-side JS can be bypassed easily and or disabled
+the server is the only place you can actually trust and to enforce the rules.
