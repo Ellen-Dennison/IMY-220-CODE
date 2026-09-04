@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoShare Feed</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // Student Number: u23849259
+        // Write your React code below.
+        const {useState} = React;
+
+
+        function Postcard({username, caption, comment})
+        {  
+            const [showDetails, setShowDetails] = useState(false);
+
+            function toggleDetails()
+            { setShowDetails(!showDetails); }
+
+            return(
+                <div className="post-card">
+                    <h2>{username}</h2>
+                    <p>{caption}</p> 
+                    <button onClick={toggleDetails}>
+                        {showDetails ?  "Hide Comments" : "Show Comments"}
+                    </button>
+                    {showDetails &&  <p>{comment}</p>}
+                </div>
+            );
+        }
+
+
+
+        function App()
+        {   
+            const [heading, setHeading] = useState("PhotoShare Feed");
+
+            return (
+                <div className="app">
+                    <input value={heading} onChange={(event)=> setHeading(event.target.value)}/>
+                    <h1>{heading}</h1>
+                    <Postcard username="@sarah" caption="Studying React today!" comment="React is actually quite fun!"/>
+                    <Postcard username="@john" caption="Finished Practical 3." comment="Great job!"/>
+                    <Postcard username="@amy" caption="Coffee before coding." comment="Beautiful photo!"/>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App/>)
+    </script>
+
+</body>
+</html>

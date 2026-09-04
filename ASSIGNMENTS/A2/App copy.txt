@@ -1,0 +1,117 @@
+// Student Number: u23849259
+const { useState } = React;
+
+// ==========================
+// Supplied Data
+// Do not modify this section
+// ==========================
+const posts = [
+    {
+        id: 1,
+        username: "@sarah",
+        caption: "Studying React today!",
+        status: "Published"
+    },
+    {
+        id: 2,
+        username: "@john",
+        caption: "Finished Practical 3.",
+        status: "Draft"
+    },
+    {
+        id: 3,
+        username: "@amy",
+        caption: "Coffee before coding.",
+        status: "Published"
+    },
+    {
+        id: 4,
+        username: "@michael",
+        caption: "Working on Assignment 2.",
+        status: "Archived"
+    },
+    {
+        id: 5,
+        username: "@leanne",
+        caption: "Sunset over campus.",
+        status: "Published"
+    } 
+];
+
+// ==========================
+// React Components
+// Write your components below
+// ==========================
+
+function App() {
+   
+    const [newPosts, setPosts] = useState(posts);
+
+    function handleDelete(id) 
+    { setPosts(newPosts.filter(a => a.id !== id)); }
+
+    return (
+        <div className="app">
+            <h1>PhotoShare Manager</h1>
+          { (posts) != 0 ? <PostList onDelete = {handleDelete} /> : <p className="post-card"> no posts </p> }
+        </div>
+    );
+}
+
+function PostList({onDelete}) {
+   
+    
+
+    function statusChange(status,id) 
+    { 
+       console.log("Change it");
+       newPosts[id-1].status == "check";
+       setPosts( newPosts );
+
+    }
+  
+    return(
+        
+        (newPosts) != 0 ? 
+                newPosts.map((x) => ( 
+                    <PostCard
+                    key = {x.id}
+                    id = {x.id}
+                    username={x.username}
+                    caption={x.caption}
+                    status={x.status} 
+                    onDelete ={handleDelete}   
+                    onStatus={statusChange}               
+                />
+        ))
+        : <p className="post-card"> no posts </p> 
+    );
+
+}
+function PostCard({id,username, caption, status, onDelete, onStatus}) {
+ 
+    return (
+        <div className="post-card">
+            <h2>{username}</h2>
+            <p>{caption}</p>
+            <p>{status}</p>
+
+            <div className="post-actions">
+                <button onClick={() => onDelete(id)} >
+                    Delete Post
+                </button>
+                <button onClick={() => onStatus(status,id)}>
+                    Change Status
+                </button>
+            </div>
+        </div>
+    );
+}
+
+
+// ==========================
+// Render the Application
+// Do not modify this section
+// ==========================
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
