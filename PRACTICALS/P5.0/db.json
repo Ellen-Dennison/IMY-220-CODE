@@ -1,0 +1,33 @@
+{
+    "posts":
+    [
+        {
+            "id": 1,
+            "username": "thandi_m",
+            "caption": "Sunset over Hatfield 🌇",
+            "imageUrl": "https://placehold.co/400x300?text=Sunset",
+            "likes": 24
+        },
+        {
+            "id": 2,
+            "username": "kabelo.codes",
+            "caption": "Finally got React Router working!",
+            "imageUrl": "https://placehold.co/400x300?text=React+Router",
+            "likes": 41
+        },
+        {
+            "id": 3,
+            "username": "aisha_p",
+            "caption": "Coffee before the AJAX lecture ☕",
+            "imageUrl": "https://placehold.co/400x300?text=Coffee",
+            "likes": 12
+        },
+        {
+            "id": 4,
+            "username": "johan_lectures",
+            "caption": "Async is not that scary, promise 🙂",
+            "imageUrl": "https://placehold.co/400x300?text=Async",
+            "likes": 58
+        }
+    ]
+}
