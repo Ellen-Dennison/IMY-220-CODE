@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Monstera Deliciosa",
+    "description": "Known for its large, perforated leaves, this tropical plant is also called the Swiss cheese plant."
+  },
+  {
+    "name": "Snake Plant",
+    "description": "A very resilient plant with stiff, upright leaves, often variegated with yellow or white edges."
+  },
+  {
+    "name": "ZZ Plant",
+    "description": "An incredibly low-maintenance plant with waxy, dark green leaves that tolerate low light."
+  },
+  {
+    "name": "Pothos",
+    "description": "A popular vining plant with heart-shaped leaves that can thrive in a variety of conditions."
+  },
+  {
+    "name": "Spider Plant",
+    "description": "Produces long, arching leaves with stripes and creates 'plantlets' that dangle from the main plant."
+  },
+  {
+    "name": "Fiddle Leaf Fig",
+    "description": "Features large, violin-shaped leaves and can grow into a small indoor tree with proper care."
+  },
+  {
+    "name": "Peace Lily",
+    "description": "Known for its elegant white spathes that look like flowers and its ability to tolerate low light."
+  },
+  {
+    "name": "Aloe Vera",
+    "description": "A succulent with thick, fleshy leaves filled with a gel that has medicinal properties."
+  },
+  {
+    "name": "Cast Iron Plant",
+    "description": "As its name suggests, this plant is nearly indestructible, thriving on neglect and low light."
+  },
+  {
+    "name": "Succulent Assortment",
+    "description": "A mix of small, diverse plants with fleshy leaves, often drought-tolerant and easy to care for."
+  }
+]

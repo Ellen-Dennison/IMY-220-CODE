@@ -20,13 +20,13 @@ function App() {
     }
 
     return (
-        <main>
-            <h1>PhotoShare</h1>
-
-            <AddPostForm onAddPost={addPost} />
-
-            <PostList posts={posts} />
-        </main>
+        <div className="min-h-screen bg-emerald-100">
+            <main className="max-w-xl mx-auto p-6">
+                <h1 className="text-3xl font-extrabold text-gray-900 text-center mb-8">PhotoShare</h1>
+                <AddPostForm onAddPost={addPost} />
+                <PostList posts={posts} />
+            </main>
+        </div>
     );
 }
 
