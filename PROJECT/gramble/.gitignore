@@ -1,3 +1,4 @@
 backend/uploads/*
 !backend/uploads/.gitkeep
 docker-compose.yml
+*.env
