@@ -1,7 +1,8 @@
 import { MongoClient } from 'mongodb'
 import bcrypt from 'bcrypt'
+require('dotenv').config()
 
-const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority'
+const MONGO_URL = process.env.MONGO_URL || MongoDBConnectionString
 const client = new MongoClient(MONGO_URL)
 
 const USERS = [
