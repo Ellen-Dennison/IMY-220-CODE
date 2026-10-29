@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb'
 import bcrypt from 'bcrypt'
 require('dotenv').config()
 
-const MONGO_URL = process.env.MONGO_URL || MongoDBConnectionString
+const MONGO_URL = process.env.MONGO_URL || process.env.MongoDBConnectionString
 const client = new MongoClient(MONGO_URL)
 
 const USERS = [
