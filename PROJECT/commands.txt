@@ -1,0 +1,8 @@
+mkdir gramble && cd gramble
+npm create vite@latest frontend -- --template react
+cd frontend
+npm install
+npm install tailwindcss @tailwindcss/vite react-router-dom
+mkdir -p src/components src/pages src/assets/images src/assets/fonts
+cd ..
+mkdir backend

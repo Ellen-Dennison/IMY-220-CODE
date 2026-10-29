@@ -1,0 +1,88 @@
+{
+  "explainVersion": "1",
+  "queryPlanner": {
+    "namespace": "gramble.users",
+    "parsedQuery": {},
+    "indexFilterSet": false,
+    "queryHash": "8F2383EE",
+    "planCacheShapeHash": "8F2383EE",
+    "planCacheKey": "7DF350EE",
+    "optimizationTimeMillis": 0,
+    "maxIndexedOrSolutionsReached": false,
+    "maxIndexedAndSolutionsReached": false,
+    "maxScansToExplodeReached": false,
+    "prunedSimilarIndexes": false,
+    "winningPlan": {
+      "isCached": false,
+      "stage": "COLLSCAN",
+      "direction": "forward"
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 8,
+    "executionTimeMillis": 0,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 8,
+    "executionStages": {
+      "isCached": false,
+      "stage": "COLLSCAN",
+      "nReturned": 8,
+      "executionTimeMillisEstimate": 0,
+      "works": 9,
+      "advanced": 8,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "direction": "forward",
+      "docsExamined": 8
+    }
+  },
+  "queryShapeHash": "B99B53797C850330063A6CA1803AAB01AC61013D4C07D019B121F2AD8A23A41B",
+  "command": {
+    "find": "users",
+    "filter": {},
+    "skip": 0,
+    "limit": 0,
+    "maxTimeMS": 60000,
+    "$db": "gramble"
+  },
+  "serverInfo": {
+    "host": "ac-oqrr0f2-shard-00-02.akghh0j.mongodb.net",
+    "port": 27017,
+    "version": "8.0.34",
+    "gitVersion": "51db4515a6597aedcf6188ee4e48a27e65b065ae"
+  },
+  "serverParameters": {
+    "internalQueryFacetBufferSizeBytes": 104857600,
+    "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+    "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+    "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+    "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+    "internalQueryProhibitBlockingMergeOnMongoS": 0,
+    "internalQueryMaxAddToSetBytes": 104857600,
+    "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+    "internalQueryFrameworkControl": "trySbeRestricted",
+    "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1,
+  "$clusterTime": {
+    "clusterTime": {
+      "$timestamp": "7702211946233200655"
+    },
+    "signature": {
+      "hash": "vuBn8bkpYP1kOG5/WAYOGRPJYhA=",
+      "keyId": {
+        "high": 1779557014,
+        "low": 2,
+        "unsigned": false
+      }
+    }
+  },
+  "operationTime": {
+    "$timestamp": "7702211946233200655"
+  }
+}

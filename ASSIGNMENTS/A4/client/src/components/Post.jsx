@@ -1,11 +1,9 @@
-// Student Number: u23849259
+// Student Number: uXXXXXXX
 
-function Post({ post, onDelete }) {
+function Post() {
     return (
         <article className="post">
-            <h3>{post.username}</h3>
-            <p>{post.caption}</p>
-            <button onClick={() => onDelete(post.id)}>Delete</button>
+            {/* Display a single post here. */}
         </article>
     );
 }

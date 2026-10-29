@@ -1,16 +1,15 @@
-# React + Vite
+Running the project 
+docker compose up --build
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Exporting the JSON files
+docker run --rm -v ${PWD}:/backup mongodb/mongodb-community-server:latest mongoexport --uri="mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/users.json --jsonArray
 
-Currently, two official plugins are available:
+docker run --rm -v ${PWD}:/backup mongodb/mongodb-community-server:latest mongoexport --uri="mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/albums.json --jsonArray
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+docker run --rm -v ${PWD}:/backup mongodb/mongodb-community-server:latest mongoexport --uri="mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/posts.json --jsonArray
 
-## React Compiler
+docker run --rm -v ${PWD}:/backup mongodb/mongodb-community-server:latest mongoexport --uri="mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/sessions.json --jsonArray
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+docker run --rm -v ${PWD}:/backup mongodb/mongodb-community-server:latest mongoexport --uri="mongodb+srv://test-user:123Hello@mangdb.akghh0j.mongodb.net/gramble?retryWrites=true&w=majority" --collection=users --out=/backup/comments.json --jsonArray
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

@@ -1,0 +1,48 @@
+#Student Number: u23849259
+services:
+  db:
+    image: mongo
+    container_name: photoshare_db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - photoshare_network
+
+  api:
+    build: ./server
+    container_name: photoshare_api
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./server/.env
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - photoshare_network
+
+  client:
+    build: ./client
+    container_name: photoshare_client
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    networks:
+      - photoshare_network
+
+volumes:
+  mongo_data:
+
+networks:
+  photoshare_network:

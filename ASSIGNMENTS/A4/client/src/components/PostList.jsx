@@ -1,20 +1,9 @@
-// Student Number: u23849259
-import Post from "./Post";
+// Student Number: uXXXXXXX
 
-function PostList({ posts, onDelete }) {
-    if (posts.length === 0) {
-        return (
-            <section className="post-list">
-                <p className="empty">No posts found.</p>
-            </section>
-        );
-    }
-
+function PostList() {
     return (
         <section className="post-list">
-            {posts.map(post => (
-                <Post key={post.id} post={post} onDelete={onDelete} />
-            ))}
+            {/* Display the posts here. */}
         </section>
     );
 }

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hot: #e6007e; 
+  --color-ink: #050500;
+  --color-azure: #3b88ff;
+  --color-leaf: #84c920;
+  --color-persian-pink: #6f99dc;
+
+  --font-display: "Bowlby One", "Arial Black", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-script: "Dancing Script", cursive;
+}
+
+body {
+  margin: 0;
+  background: var(--color-hot);
+  font-family: var(--font-mono);
+  color: var(--color-ink);
+}
+
+
+.wordmark {
+  color: var(--color-ink);
+  -webkit-text-stroke: 0.08em #fff;
+  paint-order: stroke fill;
+  letter-spacing: -0.02em;
+}
+
+
+.polaroid {
+  transform: rotate(-15deg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes settle {
+  from {
+    transform: rotate(-30deg) translateY(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-15deg);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .polaroid {
+    animation: settle 0.7s ease-out;
+  }
+}
+
+.tape {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  background-color: var(--color-persian-Pink);
+  opacity: 0.8;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+.tape-top-left {
+  top: -12px;
+  left: -20px;
+  transform: rotate(-45deg);
+}
+.tape-bottom-right {
+  bottom: -12px;
+  right: -20px;
+  transform: rotate(-45deg);
+}
+
+.dashed-line {
+  stroke: var(--color-ink);
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+}
+
+:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "photoshare-server",
+  "version": "1.0.0",
+  "description": "PhotoShare Express API for IMY 220 Assignment 6",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0"
+  }
+}

@@ -1,13 +1,9 @@
-// Student Number: u23849259
-function SearchPosts({ value, onChange }) {
+// Student Number: uXXXXXXX
+
+function SearchPosts() {
     return (
         <section className="search-posts">
-            <input
-                type="text"
-                placeholder="Search by username or caption"
-                value={value}
-                onChange={e => onChange(e.target.value)}
-            />
+            {/* Complete the search functionality here. */}
         </section>
     );
 }
