@@ -1,6 +1,6 @@
 services:
   mongo:  #May be unnecessary
-    image: mongo:7
+    image: mongo:
     ports:
       - "27017:27017"
     volumes:
